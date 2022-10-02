@@ -14,8 +14,8 @@ function computerChoice() {
 }
 
 
-function game() {
-    let userChoice = prompt("Enter your figure: ");
+function game(userChoice) {
+    
 
     if (userChoice == computerChoice()) {
         return "tie";
@@ -45,7 +45,18 @@ function game() {
         }                         
     }
 }
-for (let i =0;i<5;i++){
-    console.log(game());
-}
+const rock = document.querySelector('#rock');
+rock.addEventListener('click', () => {
+  alert(game('rock'));
+});
+const paper = document.querySelector('#paper');
+paper.addEventListener('click', ()=> {
+    alert(game('paper'));
+});
+
+const scissors = document.querySelector('#scissors');
+
+scissors.addEventListener('click', ()=>{
+    alert(game('scissors'));
+})
 
